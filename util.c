@@ -144,3 +144,12 @@ pscanf(const char *path, const char *fmt, ...)
 
 	return (n == EOF) ? -1 : n;
 }
+
+int
+interpolate(float f, int min, int max_ex)
+{
+    if (f < 0)
+        f = -f;
+    int x = (int) (f * (max_ex - min) + min);
+    return (x >= max_ex ? max_ex-1 : (x < min ? min : x));
+}

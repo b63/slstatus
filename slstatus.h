@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* battery */
-const char *battery_perc(const char *);
+int        *battery_perc(const char *);
 const char *battery_state(const char *);
 const char *battery_remaining(const char *);
 
@@ -79,3 +79,10 @@ const char *vol_perc(const char *card);
 /* wifi */
 const char *wifi_perc(const char *interface);
 const char *wifi_essid(const char *interface);
+
+/* custom functions */
+/* ditto */
+const char *ditto(const char *str);
+/* color formatted battery status */
+const char *
+battery_module(const char *bat);
