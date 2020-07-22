@@ -86,11 +86,11 @@
 			return NULL;
 		}
 		wreq.u.essid.pointer = id;
-		if (ioctl(sockfd,SIOCGIWESSID, &wreq) < 0) {
-			warn("ioctl 'SIOCGIWESSID':");
-			close(sockfd);
-			return NULL;
-		}
+		//if (ioctl(sockfd,SIOCGIWESSID, &wreq) < 0) {
+		//	warn("ioctl 'SIOCGIWESSID':");
+		//	close(sockfd);
+		//	return NULL;
+		//}
 
 		close(sockfd);
 
